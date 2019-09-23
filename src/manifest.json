@@ -1,14 +1,18 @@
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.3",
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
     "version": "1.0.0",
-    "id": "00000000-0000-0000-0000-000000000000",
+    "id": "2eec31c0-e4f6-45a6-82e4-0a2acb556933",
     "packageName": "com.contoso.helloworld",
     "developer": {
         "name": "Contoso",
         "websiteUrl": "https://www.microsoft.com",
         "privacyUrl": "https://www.microsoft.com/privacy",
         "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+    },
+    "icons": {
+        "color": "contoso96x96.png",
+        "outline": "contoso20x20.png"
     },
     "name": {
         "short": "Hello World",
@@ -18,26 +22,26 @@
         "short": "Hello World App for Microsoft Teams",
         "full": "This sample app provides a very simple app for Microsoft Teams. You can extend this to add more content and capabilities."
     },
-    "icons": {
-        "outline": "contoso20x20.png",
-        "color": "contoso96x96.png"
-    },
     "accentColor": "#60A18E",
-    "staticTabs": [{
-        "entityId": "com.contoso.helloworld.hellotab",
-        "name": "Hello Tab",
-        "contentUrl": "https://yourteamsapp.ngrok.io/hello",
-        "scopes": [
-            "personal"
-        ]
-    }],
-    "configurableTabs": [{
-        "configurationUrl": "https://yourteamsapp.ngrok.io/configure",
-        "canUpdateConfiguration": true,
-        "scopes": [
-            "team"
-        ]
-    }],
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://teamshello.jebosoft.ngrok.io/configure",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team"
+            ]
+        }
+    ],
+    "staticTabs": [
+        {
+            "entityId": "com.contoso.helloworld.hellotab",
+            "name": "Hello Tab",
+            "contentUrl": "https://teamshello.jebosoft.ngrok.io/hello",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
     "bots": [{
         "botId": "00000000-0000-0000-0000-000000000000",
         "needsChannelSelector": false,
@@ -61,6 +65,18 @@
             }]
         }]
     }],
-    "permissions": [],
-    "validDomains": []
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "teamshello.jebosoft.ngrok.io",
+        "yourteamsapp.ngrok.io"
+    ],
+    "devicePermissions": [
+        "media",
+        "geolocation",
+        "notifications",
+        "openExternal"
+    ]
 }

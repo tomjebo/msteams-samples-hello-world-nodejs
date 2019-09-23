@@ -25,7 +25,7 @@
     "accentColor": "#60A18E",
     "configurableTabs": [
         {
-            "configurationUrl": "https://teamshello.jebosoft.ngrok.io/configure",
+            "configurationUrl": "https://9fc53157.ngrok.io/configure",
             "canUpdateConfiguration": true,
             "scopes": [
                 "team"
@@ -36,7 +36,7 @@
         {
             "entityId": "com.contoso.helloworld.hellotab",
             "name": "Hello Tab",
-            "contentUrl": "https://teamshello.jebosoft.ngrok.io/hello",
+            "contentUrl": "https://9fc53157.ngrok.io/hello",
             "scopes": [
                 "personal"
             ]
@@ -86,6 +86,7 @@
         "messageTeamMembers"
     ],
     "validDomains": [
+        "f927eef9.ngrok.io",
         "teamshello.jebosoft.ngrok.io",
         "yourteamsapp.ngrok.io"
     ],

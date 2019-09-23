@@ -42,29 +42,45 @@
             ]
         }
     ],
-    "bots": [{
-        "botId": "00000000-0000-0000-0000-000000000000",
-        "needsChannelSelector": false,
-        "isNotificationOnly": false,
-        "scopes": [
-            "team",
-            "personal"
-        ]
-    }],
-    "composeExtensions": [{
-        "botId": "00000000-0000-0000-0000-000000000000",
-        "commands": [{
-            "id": "getRandomText",
-            "description": "Gets some random text and images that you can insert in messages for fun.",
-            "title": "Get some random text for fun",
-            "initialRun": true,
-            "parameters": [{
-                "name": "cardTitle",
-                "description": "Card title to use",
-                "title": "Card title"
-            }]
-        }]
-    }],
+    "bots": [
+        {
+            "botId": "2cab42af-f6ad-44a0-9eb0-e2c8bd901858",
+            "scopes": [
+                "personal",
+                "team"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false
+        }
+    ],
+    "composeExtensions": [
+        {
+            "botId": "2cab42af-f6ad-44a0-9eb0-e2c8bd901858",
+            "canUpdateConfiguration": true,
+            "commands": [
+                {
+                    "id": "getRandomText",
+                    "type": "query",
+                    "title": "Get some random text for fun",
+                    "description": "Gets some random text and images",
+                    "initialRun": true,
+                    "fetchTask": false,
+                    "context": [
+                        "commandBox",
+                        "compose"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "cardTitle",
+                            "title": "Card Title",
+                            "description": "Card title to use",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "permissions": [
         "identity",
         "messageTeamMembers"

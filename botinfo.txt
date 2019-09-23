@@ -1,0 +1,5 @@
+bot app id: 2cab42af-f6ad-44a0-9eb0-e2c8bd901858
+
+bot password: =2D@Bgz61xclfA7dqkaxNuTXwaFpOC]=
+
+messaging endpoint: https://teamshello.jebosoft.ngrok.io/api/messages
